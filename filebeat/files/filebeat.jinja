@@ -77,5 +77,8 @@ output:
 shipper:
 
 logging:
+  level: info
+  to_syslog: true
+  to_files: false
   files:
     rotateeverybytes: 10485760 # = 10MB
