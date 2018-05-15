@@ -47,7 +47,7 @@ filebeat:
     server:
       - logstash-shipper1:5044
       - logstash-shipper2:5044
-    max_entries: -1
+    max_retries: -1
     tls:
       enabled: True
       # path to the certificate of your ELK server
