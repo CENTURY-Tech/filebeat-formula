@@ -63,6 +63,9 @@ output:
     worker: 1
     loadbalance: true
     index: filebeat
+{%- if 'max_entries' in logstash %}
+    max_entries: {{ logstash.max_entries }}
+{%- endif %}
 
 {%- if 'tls' in logstash %}
 {%- if logstash.tls.get('enabled', False) %}
